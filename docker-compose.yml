@@ -1,0 +1,8 @@
+services:
+  app:
+    build: .
+    command: python3 app.py
+    volumes:
+      - ./my_account.session:/app/my_account.session:rw
+    env_file:
+      - .env
